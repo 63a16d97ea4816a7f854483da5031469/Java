@@ -1,11 +1,12 @@
 import java.util.ArrayList;
-import java.util.Collection;
+import java.util.Collections;
 import java.util.Date;
 import java.util.Enumeration;
 import java.util.Hashtable;
 import java.util.LinkedList;
-
-import com.sun.xml.internal.ws.policy.privateutil.PolicyUtils.Collections;
+import java.util.Map;
+import java.util.TreeMap;
+ 
 
 public class TestMain {
 	
@@ -15,15 +16,20 @@ public class TestMain {
 		LinkedList list=new LinkedList();
 		ArrayList arr=new ArrayList();
 		
-
+		TreeMap treeMap=new TreeMap();
+		Map map = Collections.synchronizedMap(treeMap);
+		treeMap.entrySet().
 		
+		
+		Collections.sort(list);
+ 
 		  System.out.println("MB: " + (double) (Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory()) / 1024/1024);
 		  
 
-		Hashtable table=new Hashtable();
+		  TreeMap table=new TreeMap();
 		
 		for(int i=0;i<5000;i++){
-			Hashtable subTable=new Hashtable();
+			TreeMap subTable=new TreeMap();
 		for(int j=0;j<1000;j++){
 		TestObj testObj=new TestObj();
 		testObj.id=j;
@@ -33,8 +39,7 @@ public class TestMain {
 			}
 		table.put(i,subTable);
 		}
-		
-		Enumeration e=table.keys();
+ 
 		
 //		System.out.println("loop the table:");
 //		while(e.hasMoreElements()){
@@ -45,6 +50,11 @@ public class TestMain {
 	        System.out.println("MB: " + (double) (Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory()) / 1024/1024);
 	  
 		
+		
+	}
+	
+	public void test(){
+ 
 		
 	}
 	
