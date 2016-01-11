@@ -4,7 +4,6 @@ import java.util.Date;
 import java.util.Enumeration;
 import java.util.Hashtable;
 import java.util.LinkedList;
-import java.util.Map;
 import java.util.TreeMap;
  
 
@@ -15,22 +14,16 @@ public class TestMain {
 		
 		LinkedList list=new LinkedList();
 		ArrayList arr=new ArrayList();
-		
-		TreeMap treeMap=new TreeMap();
-		Map map = Collections.synchronizedMap(treeMap);
-		treeMap.entrySet().
-		
-		
-		Collections.sort(list);
+ 
  
 		  System.out.println("MB: " + (double) (Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory()) / 1024/1024);
 		  
 
 		  TreeMap table=new TreeMap();
-		
-		for(int i=0;i<5000;i++){
+		//4000000
+		for(int i=0;i<4000;i++){
 			TreeMap subTable=new TreeMap();
-		for(int j=0;j<1000;j++){
+		for(int j=0;j<100;j++){
 		TestObj testObj=new TestObj();
 		testObj.id=j;
 		testObj.type="fdsfaf";
